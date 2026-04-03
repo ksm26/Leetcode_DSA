@@ -1,0 +1,18 @@
+from collections import Counter
+class Solution:
+    def maxNumberOfBalloons(self, text: str) -> int:
+        balloon = Counter("balloon")
+        string = Counter(text)
+        times = float("inf")
+
+        for ch in balloon : 
+            available = string.get(ch,0)
+            needed = balloon[ch]
+            times = min(times, available //needed)
+
+        return times 
+
+
+
+
+        
