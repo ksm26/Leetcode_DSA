@@ -24,6 +24,5 @@ class Solution:
 
             chemistry += i * (score-i) 
         
-        
         return chemistry
         
