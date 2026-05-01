@@ -17,9 +17,9 @@ class Solution:
                 if (node.val >= low) and (node.val <= high):
                     count += node.val
 
-                if node.left : 
+                if node.val > low and node.left : 
                     queue.append(node.left)
-                if node.right :
+                if node.val < high and node.right :
                     queue.append(node.right)
 
         return count
