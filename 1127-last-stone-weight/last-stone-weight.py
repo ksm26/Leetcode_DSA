@@ -5,11 +5,14 @@ class Solution:
 
         heapify(stones)
 
-        while len(stones) > 1 :
-            first = abs(heappop(stones))
-            second = abs(heappop(stones))
-            if first != second:
-                heapq.heappush(stones, -abs(first - second))
+        while len(stones) > 1 : 
+            y = abs(heappop(stones))
+            x = abs(heappop(stones))
+            if x!=y : 
+                y = abs(y - x)
+                heappush(stones,-y)
 
         return -stones[0] if stones else 0 
+
+
         
