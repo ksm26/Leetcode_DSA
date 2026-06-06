@@ -7,9 +7,10 @@ class Solution:
         heapify(heap)
 
         for _ in range(k):
-            val = heappop(heap)
-            x = math.floor(val/2)
+            x = heappop(heap)
+            x = math.floor(x/2)
             heappush(heap,x)
 
         return -sum(heap)
+
         
